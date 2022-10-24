@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificador de Indicidencias</title>
+    <style>
+        form{
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="Notificador de Incidencias" action="procesar-incidencia.php" method="post" target="_self">
+
+        <fieldset><legend>Datos de la Incidencia</legend>
+
+            <label for="usuario">Usuario:</label><br>
+            <input type="text" name="usuario" id="usuario">
+            <br>
+            <br>
+
+            <label for="departamento">Departamento:</label>
+            <br>
+            <select name="departamento" id="departamento">
+                <option value="informatica">Informática</option>
+                <option value="marketing">Marketing</option>
+                <option value="ventas">Ventas</option>
+            </select>
+            <br>
+            <br>
+            
+            <label for="descripcion">Descripción:</label>
+            <br>
+            <textarea name="descripcion" id="descripcion" cols="40" rows="3"  placeholder="Describa la incidencia..." required></textarea>
+            <br>
+            <br>
+
+            <label for="contraseña">Contraseña:</label>
+            <br>
+            <input type="password" id="contraseña" name="contraseña" required minlength="6">
+
+        </fieldset>
+
+        <fieldset><legend>Botones y reset de envío:</legend>
+        
+                <button type="reset" name="resetear">Resetear</button>
+                <button type="submit" name="enviar">Enviar</button>
+        </fieldset>
+    
+    </form>
+
+</body>
+
+</html>
